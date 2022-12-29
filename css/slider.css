@@ -1,0 +1,127 @@
+.swiper.mySwiper{
+  margin-top: 100px;
+}
+
+.swiper-wrapper{
+  margin-top: 100px;
+}
+
+.swiper-wrapper img{
+  width: 445px;
+  height: 647px;
+}
+
+.swiper {
+  width: 88%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+  
+.swiper-slide img {
+  display: block;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev{
+  background-image: url(../image/icon/left.svg);
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s linear;
+}
+
+.swiper-button-next{
+  background-image: url(../image/icon/right.svg);
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s linear;
+}
+
+.swiper-button-prev::after{
+  display: none;
+}
+
+.swiper-button-next::after{
+  display: none;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 1440px){
+  .swiper.mySwiper{
+    margin-top: 70px;
+  }
+  .swiper {
+    width: 85%;
+    height: 100%;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 68%;
+    height: 100%;
+    object-fit: cover;
+  } 
+}
+
+@media (max-width: 1200px){
+  .swiper {
+    width: 83%;
+    height: 100%;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 68%;
+    height: 100%;
+    object-fit: cover;
+  } 
+}
+
+@media (max-width: 610px){
+  .swiper-button-prev{
+    background-image: url(../image/icon/left__brown.svg);
+  }
+}
+
+@media(max-width: 510px){
+  .swiper-button-prev,
+  .swiper-button-next{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media(max-width: 410px){
+  .swiper-button-prev,
+  .swiper-button-next{
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+  }
+}

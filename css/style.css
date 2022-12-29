@@ -1,0 +1,1248 @@
+
+
+@font-face {
+    font-family: Goodwine;
+    src: url(../fonts/Goodwine-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Playfair;
+    src: url(../fonts/PlayfairDisplay-Bold.ttf);
+}
+
+*,*:before, *:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(../image/photos/background5.png);
+    background-color: rgb(229, 227, 223);
+    background-repeat: no-repeat;
+}
+
+.page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header{
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 2;
+}
+
+.container{
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.header__body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.header__logo__text{
+    display: flex;
+    align-items: center;
+}
+
+.header__logo{
+    flex: 0 0 113px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.header__text__link{
+    text-decoration: none;
+    font-family: Goodwine;
+    font-size: 20px;
+    color: #E5E3DF;
+    width: 133px;
+    line-height: 30px;
+    margin-left: 30px;
+}
+
+.header__burger{
+    display: none;
+}
+
+.header__list{
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.header__list li{
+    list-style: none;
+    margin: 0px 50px 0px 0px;
+}
+
+.li__anim{
+    transition: 0.3s linear;
+}
+
+.li__anim:hover{
+    transform: scale(1.1);
+}
+
+.header__link{
+    font-family: Montserrat;
+    color: #E5E3DF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 170px 0px 0px 0px;
+}
+
+.content__text{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.content__text h1{
+    font-family: Playfair;
+    font-size: 64px;
+    color: #E5E3DF;
+    max-width: 706px;
+    line-height: 90px;
+}
+
+.content__text.breeds,
+.content__text.subscribe{
+    font-family: Montserrat;
+    font-size: 30px;
+    max-width: 688px;
+    color: #E5E3DF;
+    margin: 45px 0px 0px 0px;
+    line-height: 45px;
+}
+
+.social__link{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    margin: 55px 0px 0px 0px;
+}
+
+.icon.vk{
+    width: 35.62px;
+    height: 22.11px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 81px;
+    background-size: 100%;
+    background: url(../image/icon/vk.svg);
+    background-position: center;
+    transition: 0.3s linear;
+}
+
+.icon.fb{
+    width: 18.42px;
+    height: 31.94px;
+    margin-right: 81px;
+    background-size: 100% 100%;
+    background-image: url(../image/icon/fb.svg);
+    background-position: center;
+    transition: 0.3s linear;
+}
+
+.icon.tw{
+    width: 34.39px;
+    height: 27.02px;
+    margin-right: 81px;
+    background-size: 100% 100%;
+    background-image: url(../image/icon/tw.svg);
+    background-position: center;
+    transition: 0.3s linear;
+}
+
+.icon.inst{
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+    background-image: url(../image/icon/inst.svg);
+    background-position: center;
+    transition: 0.3s linear;
+}
+
+.icon.vk:hover,
+.icon.fb:hover,
+.icon.tw:hover,
+.icon.inst:hover{
+    transform: scale(1.2);
+}
+
+.content__image{
+    display: flex;
+}
+
+.content__image img{
+    border: 10px solid #2A1911;
+    /* margin: 0px 0px 0px 270px; */
+}
+
+.content__text__buy h1{
+    font-family: Playfair;
+    font-size: 64px;
+    color: #2A1911;
+    max-width: 600px;
+    line-height: 90px;
+    margin: 160px 0px 0px auto;
+}
+
+.read-more-checker,
+.read-more-checker2{
+    visibility: hidden;
+}
+
+.content__main{
+    display: flex;
+    align-items: center;
+    max-width: 1680px;
+    height: auto;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.content__main h1{
+    font-family: Playfair;
+    font-size: 64px;
+    color: #2A1911;
+    max-width: 800px;
+    margin-top: 90px;
+}
+
+.content__main p{
+    font-family: Montserrat;
+    font-size: 30px;
+    color: #2A1911;
+    line-height: 40px;
+    max-width: 850px;
+    margin-top: 45px;
+}
+
+.content__image__main{
+    border: 10px solid #D9AA63;
+}
+
+.content__text__headline h1{
+    font-family: Playfair;
+    font-size: 64px;
+    text-align: right;
+    color: #2A1911;
+    max-width: 910px;
+    margin: 100px 0px 100px auto;
+}
+
+.content__main__comment{
+    display: flex;
+    align-items: center;
+    max-width: 1680px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.content__image__main__reviews{
+    border: 10px solid #D9AA63;
+}
+
+.content__main__reviews{
+    display: flex;
+    flex-direction: column;
+    width: 830px;
+    margin-left: 166px;
+}
+
+.text__main{
+    font-family: Montserrat;
+    font-size: 30px;
+    max-width: 674px;
+    max-height: 476px;
+    margin: 0 auto;
+}
+
+.quotes{
+   margin-left: auto;
+}
+
+.footer{
+    height: 373px;
+    background-color: #2A1911;
+    margin-top: 150px;
+}
+
+.container__footer{
+    display: flex;
+    align-items: center;
+    max-width: 1680px;
+    margin: 0 auto;
+    margin-top: 55px;
+}
+
+.footer__info{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.footer__contacts h2,
+.footer__about h2,
+.footer__help h2{
+    font-family: Montserrat;
+    font-size: 30px;
+    color: #E5E3DF;
+    margin-top: 18px;
+}
+
+.line{
+    border: 2px solid #888888;
+    border-radius: 10px;
+    max-width: 348px;
+}
+
+.footer__about,
+.footer__help{
+    width: 348px;
+    margin-left: 75px;
+}
+
+.footer__container__info{
+    display: flex;
+    align-items: center;
+    max-width: 348px;
+    margin-top: 18px;
+}
+
+.footer__container__info p{
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #888888;
+    margin-left: 15px;
+}
+
+.footer__container__about{
+    max-width: 348px;
+}
+
+.footer__container__about p,
+.footer__container__help p{
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #888888;
+    margin-top: 20px;
+}
+
+.footer__contacts:hover .line,
+.footer__about:hover .line,
+.footer__help:hover .line{
+    border: 2px solid #D9AA63;
+}
+
+.text__footer:hover{
+    color:  #D9AA63;
+}
+
+@media (max-width: 1440px){
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer{
+        max-width: 1200px;
+    }
+
+    .content__text h1{
+        font-size: 60px;
+    }
+    .content__text.breeds,
+    .content__text.subscribe{
+        font-size: 26px;
+    }
+    .content__image img{
+        width: 400px;
+        height: 360px;
+    }
+    .content__image__main img{
+        width: 400px;
+        height: 360px;
+        margin-left: 0px;
+    }
+    .icon.vk,
+    .icon.fb,
+    .icon.tw{
+        margin-right: 70px;
+    }
+    .content__text__buy h1{
+        font-size: 60px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 80px;
+        color: #E5E3DF;
+    }
+    .content__main h1{
+        font-size: 60px;
+    }
+    .content__main p{
+        font-size: 26px;
+        max-width: 700px;
+    }
+    .content__text__headline h1{
+        font-size: 60px;
+    }
+    .content__main__reviews img{
+        width: 40px;
+    }
+    .content__image__main__reviews img{
+        width: 400px;
+        height: 360px;
+    }
+    .text__main{
+        font-size: 26px;
+    }
+    .footer__info{
+        margin-left: 70px;
+    }
+    .footer__contacts{
+        width: 300px;
+        height: 220px;
+    }
+    .footer__about,
+    .footer__help{
+        width: 230px;
+        height: 220px;
+    }
+    .footer__contacts h2,
+    .footer__about h2,
+    .footer__help h2{
+        font-size: 26px;
+    }
+    .footer__container__info p{
+        font-size: 16px;
+    }
+    .footer__container__about p,
+    .footer__container__help p{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .footer__container__info img{
+        width: 30px;
+    }
+
+    .header__text__link{
+        display: none;
+    }
+}
+
+@media (max-width: 1200px){
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer{
+        max-width: 1000px;
+    }
+
+    body.lock{
+        overflow: hidden;
+    }
+
+    .header__body{
+        height: auto;
+    }
+
+    .header__logo{
+        flex: 0 0 90px;
+        z-index: 0;
+    }
+
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .header__burger span{
+        position: absolute;
+        background-color: #E5E3DF;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before,
+    .header__burger:after{
+        content: '';
+        background-color: #E5E3DF;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before{
+        top: 0;
+    }
+
+    .header__burger:after{
+        bottom: 0;
+    }
+
+    .header__burger.active span{
+        background-color: #000000;
+        transform: scale(0);
+        left: 0;
+        margin-right: 20px;
+    }
+
+    .header__burger.active:before{
+        background-color: #000000;
+        transform: rotate(45deg);
+        left: 0;
+        top: 9px;
+    }
+
+    .header__burger.active:after{
+        background-color: #000000;
+        transform: rotate(-45deg);
+        left: 0;
+        bottom: 9px;
+    }
+
+    .header__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        overflow: auto;
+        transition: all 0.3s ease 0s;
+        background-color: #E5E3DF;
+        padding: 70px 10px 20px 10px;
+    }
+
+    .header__menu.active{
+        top: 0;
+    }
+
+    .header__link{
+        color: #000000;
+        font-size: 30px;
+    }
+
+    .header__list{
+        display: block;
+    }
+
+    .header__list li{
+        margin: 0 auto;
+        line-height: 90px;
+        text-align: center;
+    }
+
+    .content{
+        padding: 70px 0px 0px 0px;
+    }
+
+    .content__text h1{
+        font-size: 45px;
+        width: 500px;
+    }
+
+    .content__text.breeds,
+    .content__text.subscribe{
+        font-size: 25px;
+        width: 500px;
+        margin-top: 15px;
+    }
+
+    .social__link img{
+        margin: 45px 55px 0px 0px;
+        max-width: 238px;
+        max-height: 21px;
+    }
+
+    .content__text__two h1{
+        font-size: 40px;
+        margin-top: 50px;
+        max-width: 370px;
+    }
+
+    .icon{
+        margin: 25px 55px 0px 0px;
+    }
+
+    .icon.vk{
+        width: 23.73px;
+        height: 14.73px;
+        background-size: 100% 100%;
+    }
+
+    .icon.fb{
+        width: 12.28px;
+        height: 21.28px;
+        background-size: 100% 100%;
+    }
+
+    .icon.tw{
+        width: 22.92px;
+        height: 18.01px;
+        background-size: 100% 100%;
+    }
+    
+    .icon.inst{
+        width: 15.99px;
+        height: 15.99px;
+        background-size: 100% 100%;
+    }
+
+    .header__text__link{
+        display: none;
+    }
+
+    .content__main h1{
+        font-size: 45px;
+        margin-top: 100px;
+    }
+
+    .content__main p{
+        font-size: 25px;
+    }
+
+    .content__main__reviews{
+        max-width: 500px;
+        margin-left: 100px;
+    }
+
+    .content__text__headline h1{
+        font-size: 45px;
+    }
+
+    .text__main{
+        font-size: 25px;
+    }
+
+    .footer__info{
+        margin-left: 40px;
+    }
+    .footer__contacts,
+    .footer__about,
+    .footer__help{
+        width: 250px;
+        height: 220px;
+    }
+    .footer__contacts h2,
+    .footer__about h2,
+    .footer__help h2{
+        font-size: 20px;
+    }
+    .footer__container__info p{
+        font-size: 14px;
+    }
+    .footer__container__about p,
+    .footer__container__help p{
+        font-size: 14px;
+        margin-top: 17px;    
+    }
+
+    .footer__container__info img{
+        width: 28px;
+    }
+
+    .limited {
+        max-height: 800px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .limited.l-100{
+        max-height: 100px;
+    }
+
+    .limited.l-500 {
+        max-height: 500px;
+    }
+      
+    .limited.l-300 {
+        max-height: 300px;
+    }
+    .limited .bottom {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(229, 229, 223, 0.879)
+        );
+        width: 100%;
+        height: 60px;
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    .read-more-checker,
+    .read-more-checker2 {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .read-more-checker:checked ~ .limited,
+    .read-more-checker2:checked ~ .limited {
+        max-height: none;
+    }
+
+    .read-more-checker:checked ~ .limited .bottom,
+    .read-more-checker2:checked ~ .limited .bottom {
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .read-more-checker ~ .read-more-button:before,
+    .read-more-checker2 ~ .read-more-button2:before  {
+        content: "Развернуть »";
+    }
+
+    .read-more-checker:checked ~ .read-more-button:before,
+    .read-more-checker2:checked ~ .read-more-button2:before {
+        content: "Свернуть «";
+    }
+
+    .read-more-button,
+    .read-more-button2{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: Montserrat;
+        font-size: 20px;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 10px;
+        color: #D9AA63;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 1200px){
+
+    .header__menu{
+        height: 75%;
+    }
+
+    .header__list li{
+        line-height: 120px;
+    }
+
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer{
+        max-width: 900px;
+    }
+
+    .container{
+        height: auto;
+    }
+    
+    .content{
+        width:1000px ;
+    }
+
+    .content__text h1{
+        font-size: 50px;
+        width: 600px;
+    }
+
+    .content__text.breeds{
+        width: 600px;
+        font-size: 28px;
+    }
+
+    .content__text.subscribe{
+        margin-top: 20px;
+        width: 600px;
+        font-size: 28px;
+    }
+
+    .icon.vk,
+    .icon.fb,
+    .icon.tw,
+    .icon.inst{
+        width: 35px;
+        height: 35px;
+    }
+    .icon.fb,
+    .icon.tw,
+    .icon.inst{
+        margin-left: 28px;
+    }
+
+    .content__image img{
+        display: none;
+    }
+
+    .content__text__buy h1{
+        font-size: 50px;
+    }
+
+    .content__main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content__main h1{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .content__main p{
+        font-size: 28px;
+    }
+
+    .content__image__main{
+        margin-top: 60px;
+    }
+
+    .content__image__main img{
+        width: 600px;
+        height: auto;
+    }
+
+    .content__text__headline h1{
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .content__main__comment{
+        flex-direction: column;
+    }
+
+    .content__image__main__reviews{
+        margin-top: 40px;
+        order: 2;
+    }
+
+    .content__image__main__reviews img{
+        width: 600px;
+        height: auto;
+    }
+
+    .content__main__reviews{
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .content__main__reviews p{
+        font-size: 28px;
+    }
+
+    .footer{
+        margin-top: 100px;
+        height: auto;
+    }
+
+    .footer__info{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .footer__about,
+    .footer__help{
+        margin-left: 0;
+    }
+
+    .footer__about,
+    .footer__help{
+        width: 348px;
+        height: auto;
+        margin-bottom: 70px;
+    }
+
+    .footer__contacts{
+        width: 450px;
+        height: auto;
+        margin-bottom: 70px;
+    }
+
+    .line{
+        margin: 0 auto;
+    }
+
+    .footer__container__info{
+        margin-bottom: 20px;
+    }
+
+    .footer__about p,
+    .footer__help p{
+        margin-top: 20px;
+    }
+
+    .footer__contacts h2,
+    .footer__about p, h2,
+    .footer__help p, h2{
+        text-align: center;
+    }
+
+    .footer__contacts h2,
+    .footer__about h2,
+    .footer__help h2{
+        font-size: 45px;
+    }
+
+    .header__logo__footer{
+        display: none;
+    }
+
+    .footer__contacts p,
+    .footer__about p,
+    .footer__help p{
+        font-size: 28px;
+    }
+
+    .footer__container__info{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 934px){
+    .content,
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer{
+        max-width: 800px;
+    }
+
+    .content__text{
+        margin: 0 auto;
+    }
+
+    .content__text h1{
+        text-align: center;
+    }
+
+    .content__text.breeds{
+        display: none;
+    }
+
+    .icon.vk,
+    .icon.fb,
+    .icon.tw,
+    .icon.inst{
+        margin: 0 auto;
+    }
+
+    .icon.fb,
+    .icon.tw{
+        margin-left: 70px;
+    }
+
+    .icon.tw{
+        margin-right: 70px;
+    }
+
+    .social__link{
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+
+    .content__text.subscribe{
+        display: none;
+    }
+
+    .content__text__buy h1{
+        margin-top: 190px;
+    }
+
+    .footer__container__info{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 821px){
+    .content,
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer{
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 710px){
+    .content,
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer{
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 610px){
+    body{
+        background-image: url(../image/photos/background7.png);
+    }
+    .content,
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer,
+    .content__text,
+    .content__text h1{
+        max-width: 500px;
+    }
+
+    .content{
+        padding-top: 100px;
+    }
+    
+    .content__text h1{
+        font-size: 46px;
+    }
+
+    .icon.vk,
+    .icon.fb,
+    .icon.tw,
+    .icon.inst{
+        width: 55px;
+        height: 55px;
+    }
+
+    .icon.inst{
+        background-image: url(../image/icon/insta2.svg);
+    }
+
+    .social__link{
+        margin-top: 145px;
+        height: auto;
+    }
+
+    .content__text__buy h1{
+        margin-top: 200px;
+        color: #2A1911;
+    }
+
+    .content__image__main img,
+    .content__image__main__reviews img{
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media (max-width: 510px){
+    body{
+        background-image: url(../image/photos/background7.png);
+    }
+    .content,
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer,
+    .content__text,
+    .content__text h1,
+    .content__main__reviews,
+    .footer__info{
+        max-width: 400px;
+    }
+    
+    .content__text h1{
+        font-size: 40px;
+    }
+
+    .icon.vk,
+    .icon.fb,
+    .icon.tw,
+    .icon.inst{
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon.tw{
+        background-image: url(../image/icon/tw2.svg);
+    }
+
+    .icon.inst{
+        background-image: url(../image/icon/insta2.svg);
+    }
+
+    .social__link{
+        margin-top: 145px;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .content__text__buy h1{
+        margin-top: 200px;
+        color: #2A1911;
+        font-size: 40px;
+    }
+
+    .content__image__main img,
+    .content__image__main__reviews img{
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media (max-width: 415px){
+    body{
+        background-image: url(../image/photos/background7.png);
+    }
+    .content,
+    .container,
+    .content__main,
+    .content__main__comment,
+    .container__footer,
+    .content__text,
+    .content__text h1,
+    .content__main__reviews,
+    .footer__info,
+    .footer__contacts,
+    .footer__about,
+    .footer__help{
+        max-width: 300px;
+    }
+
+    .content__text h1{
+        font-size: 27px;
+    }
+
+    .icon.vk,
+    .icon.fb,
+    .icon.tw,
+    .icon.inst{
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon.fb{
+        margin-left: 33px;
+    }
+
+    .icon.tw{
+        margin-right: 33px;
+        margin-left: 33px;
+    }
+
+    .icon.tw{
+        background-image: url(../image/icon/tw.svg);
+    }
+
+    .icon.inst{
+        background-image: url(../image/icon/inst.svg);
+    }
+
+    .social__link{
+        margin-top: 150px;
+        max-width: 300px;
+    }
+
+    .content__text__buy h1{
+        margin-top: 215px;
+        color: #2A1911;
+        font-size: 40px;
+    }
+
+    .content__main h1,
+    .content__text__headline h1{
+        font-size: 40px;
+    }
+
+    .footer__contacts h2,
+    .footer__about h2,
+    .footer__help h2{
+        font-size: 30px;
+    }
+
+    .footer__container__info p,
+    .footer__container__about p,
+    .footer__container__help p{
+        font-size: 18px;
+    }
+
+    .content__main p,
+    .content__main__reviews p,
+    .footer__container__info p{
+        font-size: 20px;
+    }
+
+    .content__image__main img,
+    .content__image__main__reviews img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+#myBtn {
+    background-color: rgba(255, 255, 255, 0);
+    width: 50px;
+    height: 50px;
+    display: none;
+    background-image: url(../image/icon/arrow_up.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 15px;
+}
+  
+#myBtn:hover {
+    transform: scale(1.1);
+}
